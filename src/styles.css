@@ -93,7 +93,8 @@ ul {
 .img-window-header-controls,
 .toolkit-header-controls,
 .learning-header-controls,
-.next-header-controls {
+.next-header-controls,
+.portfolio-header-controls {
   margin: 0 15px;
   font-family: monospace;
   font-size: 14px;
@@ -308,7 +309,8 @@ ul {
   color: #2e5266;
 }
 
-.opening {
+.opening,
+.portfolio {
   background: linear-gradient(135deg, #2e5266 0%, #b4a7d6 100%);
   padding: 1%;
   margin: 0 auto;
@@ -325,7 +327,8 @@ ul {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
-.img-window-header {
+.img-window-header,
+.portfolio-header {
   background-color: #f8f6fc;
   border: 1px solid #f8f6fc;
   border-radius: 6px 6px 0 0;
@@ -335,7 +338,8 @@ ul {
   justify-content: flex-end;
 }
 
-.img-window-content {
+.img-window-content,
+.portfolio-content {
   border: 1px solid #f8f6fc;
   border-top: none;
   background-color: #b4a7d6b9;
@@ -489,6 +493,30 @@ ul {
   border-radius: 0 0 6px 6px;
   color: #f8f6fc;
   text-align: center;
+}
+
+.portfolio {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.portfolio-window {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card-body {
+  background: #f8f6fc;
+  color: #2e5266 !important;
+}
+
+.card-body .btn-custom {
+  background: #2e5266;
+  color: #f8f6fc;
+  font-size: 14px;
 }
 
 @media (max-width: 767px) {
