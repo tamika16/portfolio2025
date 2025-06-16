@@ -117,9 +117,20 @@
                     name="contact"
                     method="POST"
                     data-netlify="true"
+                    netlify-honeypot="bot-field"
                     class="contact-form"
                   >
                     <input type="hidden" name="form-name" value="contact" />
+
+                    <!-- Honeypot field - spam protection from bots hidden from users -->
+                    <p style="display: none">
+                      <label
+                        >Don't fill this out if you're human:
+                        <input name="bot-field"
+                      /></label>
+                    </p>
+                    <!-- End of honeypot field -->
+
                     <div class="mb-1">
                       <label for="name" class="form-label">Name</label>
                       <input
@@ -172,14 +183,6 @@
                       </button>
                     </div>
                   </form>
-                  <script>
-                    document
-                      .querySelector('form[name="contact"]')
-                      .addEventListener("submit", function (e) {
-                        console.log("Form submit event fired!");
-                        console.log("Form data:", new FormData(this));
-                      });
-                  </script>
                 </div>
               </div>
             </div>
