@@ -44,6 +44,15 @@ ul {
   padding-left: 0 !important;
 }
 
+form {
+  text-align: left;
+}
+
+span,
+small {
+  display: block;
+}
+
 .container {
   margin: 20px;
   padding: 0;
@@ -94,7 +103,8 @@ ul {
 .toolkit-header-controls,
 .learning-header-controls,
 .next-header-controls,
-.portfolio-header-controls {
+.portfolio-header-controls,
+.form-window-header-controls {
   margin: 0 15px;
   font-family: monospace;
   font-size: 14px;
@@ -113,7 +123,8 @@ ul {
 }
 
 .hero-button .btn-custom,
-.cta .btn-custom {
+.cta .btn-custom,
+.form-window-content .btn-custom {
   background-color: #2e5266;
   color: #f8f6fc;
   border: 2px solid #2e5266;
@@ -127,7 +138,9 @@ ul {
   padding: 12px 24px;
 }
 
-.hero-button .btn-custom:hover {
+.hero-button .btn-custom:hover,
+.cta .btn-custom:hover,
+.form-window-content .btn-custom:hover {
   background-color: #f8f6fc;
   color: #2e5266;
   transform: translateY(-2px);
@@ -310,16 +323,22 @@ ul {
 }
 
 .opening,
-.portfolio {
+.portfolio,
+.work-with-me {
   background: linear-gradient(135deg, #2e5266 0%, #b4a7d6 100%);
   padding: 1%;
   margin: 0 auto;
   border-radius: 6px;
   color: #f8f6fc;
+  max-width: 90%;
 }
 
 .img-window {
   max-width: 600px;
+}
+
+.img-window,
+.form-window {
   text-align: center;
   margin: 0 auto;
   position: relative;
@@ -328,7 +347,8 @@ ul {
 }
 
 .img-window-header,
-.portfolio-header {
+.portfolio-header,
+.form-window-header {
   background-color: #f8f6fc;
   border: 1px solid #f8f6fc;
   border-radius: 6px 6px 0 0;
@@ -339,7 +359,8 @@ ul {
 }
 
 .img-window-content,
-.portfolio-content {
+.portfolio-content,
+.form-window-content {
   border: 1px solid #f8f6fc;
   border-top: none;
   background-color: #b4a7d6b9;
@@ -356,7 +377,8 @@ ul {
   font-size: 36px;
 }
 
-.opening {
+.opening,
+.work-with-me {
   position: relative;
 }
 
@@ -404,7 +426,8 @@ ul {
 
 .opening h2,
 .focus h2,
-.personal h2 {
+.personal h2,
+.work-with-me h2 {
   margin-bottom: 20px;
   font-size: 26px;
 }
@@ -511,12 +534,111 @@ ul {
 .card-body {
   background: #f8f6fc;
   color: #2e5266 !important;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-body .btn-custom {
   background: #2e5266;
   color: #f8f6fc;
   font-size: 14px;
+  margin-top: auto;
+}
+
+.work-with-me h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.form-window {
+  max-width: 500px;
+}
+
+.offer-list {
+  list-style-type: none;
+  margin-top: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.offer-list li::before {
+  content: "✦";
+  margin-right: 8px;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.contact-form label {
+  font-size: 14px;
+  margin: 1px;
+}
+
+.social-grid {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.social-link i {
+  font-size: 42px;
+  color: #b4a7d6;
+}
+
+.social-link i:hover {
+  color: #2e5266;
+}
+
+.link-desc {
+  font-size: 14px;
+}
+
+.work-with-me::before {
+  content: "✦";
+  position: absolute;
+  top: 15%;
+  right: 20%;
+  color: rgba(57, 255, 20);
+  font-size: 18px;
+  animation: float1 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.work-with-me::after {
+  content: "★";
+  position: absolute;
+  bottom: 40%;
+  left: 10%;
+  color: rgba(57, 255, 20);
+  font-size: 16px;
+  animation: float2 10s ease-in-out infinite 2s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.form-window::before {
+  content: "✦";
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  color: rgba(57, 255, 20);
+  font-size: 16px;
+  animation: float3 7s ease-in-out infinite 1s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .portfolio {
+    padding: 1rem;
+  }
+
+  .portfolio-content {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -530,7 +652,8 @@ ul {
 
   .hero h1,
   .cta h2,
-  .heading h1 {
+  .heading h1,
+  .work-with-me h2 {
     font-size: 24px;
   }
 
@@ -581,7 +704,16 @@ ul {
 
   .opening h2,
   .focus h2,
-  .personal h2 {
+  .personal h2,
+  .work-with-me h2 {
     font-size: 20px;
+  }
+
+  .work-with-me h3 {
+    font-size: 18px;
+  }
+
+  .form-window {
+    max-width: 95%;
   }
 }
