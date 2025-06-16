@@ -172,6 +172,14 @@
                       </button>
                     </div>
                   </form>
+                  <script>
+                    document
+                      .querySelector('form[name="contact"]')
+                      .addEventListener("submit", function (e) {
+                        console.log("Form submit event fired!");
+                        console.log("Form data:", new FormData(this));
+                      });
+                  </script>
                 </div>
               </div>
             </div>
