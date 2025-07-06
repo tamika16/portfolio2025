@@ -759,6 +759,16 @@ small {
   .portfolio-content {
     padding: 2rem;
   }
+
+  .approach-lists-content h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 790px) {
+  .approach-lists-content h3 {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -799,10 +809,6 @@ small {
   .personal h2,
   .approach-lists-content h2 {
     font-size: 22px;
-  }
-
-  .approach-lists-content h3 {
-    font-size: 18px;
   }
 
   .skills {
